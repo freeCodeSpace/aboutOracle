@@ -1,0 +1,9 @@
+/*Небольшие сдвиги для блоков*/
+
+.UsEnter {
+	margin-left: 17px;/*вместо 15px*/
+}
+
+#hInSearch {
+	margin-top: 6px; /*вместо 5px*/
+}

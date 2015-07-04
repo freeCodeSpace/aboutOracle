@@ -1,0 +1,192 @@
+<!doctype html>
+<HTML>
+<HEAD>
+	<META charset="utf-8">
+	<TITLE>about Oracle</TITLE>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="CSS/IEstyle.css">
+	<![endif]-->
+	<!--[if IE 9]>
+		<link rel="stylesheet" type="text/css" href="CSS/IE9style.css">
+	<![endif]-->
+	<link rel="shortcut icon" href="IMG/favicon.ico">
+	<!-- Подключение jQ, слайдер-плагин, migrate-плагин, пользовательский скрипт -->  
+	<SCRIPT type="text/javascript" src="JS\jquery-1.8.3.min.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="JS\jquery.cycle.all.min.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="JS\jquery-migrate-git.min.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="JS\userScr.js"></SCRIPT>
+</HEAD>
+<BODY>
+	<DIV id="box">
+
+	 <!--1) Header Low-->
+		<div id="headerLow">
+			<div id="headerLowBox"><!--Контейнер для повторения фона-->
+			 <!--1.1) Text-->
+				<span id="hlText">Example of Design</span>
+			 <!--1.2) User enter-->
+			 <a href="#" title="Sign In" class="UsEnter SignIn">Sign In</a>
+			 <a href="#" title="Register" class="UsEnter Reg">Register</a>
+			 <!--1.3) Search-->
+				<span id="hInput">
+					<form action="#search" method="post" id="searchForm">
+						<input type="text" id="hInSearch" name="hInSearch" placeholder="" size="" value="Search" />
+						<input type="submit" name="hInSubmit" id="hInSubmit" value="Search!" />
+					</form>
+				</span>
+			</div>
+		</div>
+
+	 <!--2) Header Main-->
+		<div id="header">
+			<div id="headerBox">
+				<a href="#" id="aboutText">about</a><!-- Ведет туда же куда и  #clickBox-->
+				<!-- Блок-Область для ссылки на Главную (или альтерн. карта изображ.) -->
+				<a id="clickBox" href="#"></a>
+			</div>
+		</div>
+
+	 <!--3) Content-->
+		<DIV id="contentBox"><!--Box центрирования контента-->
+
+			<DIV id="leftBox"><!--3.1) leftBox(под панель и слайдер)-->
+			 <!--Переключатель Слайдера-->		 
+				<a href="#" title="Previous" id="prevSlide"></a><!--Левая стрелка-->		 
+				<a href="#" id="slidePanel">Powerful Products</a><!-- Текст к Изображению(также BoxPanel) -->			 
+				<a href="#" title="Next" id="nextSlide"></a><!--Правая стрелка-->
+			 <!--Box под слайды-->
+				<div id="jQslides">
+				 <!-- Слайд 1 -->
+					<a href="#" title="See more">
+						<img src="IMG\Slide1.jpg" alt="Powerful Products" />
+					</a>
+				 <!-- Слайд 2 -->
+					<a href="#" title="See more">
+						<img src="IMG\Slide2.jpg" alt="Cloud Computing" />
+					</a>
+				 <!-- Слайд 3 -->
+					<a href="#" title="See more">
+						<img src="IMG\Slide3.jpg" alt="Trusted Company" />
+					</a>
+				</div>
+			</DIV> <!-- END OF: #leftBox-->
+
+			<!--3.2) rightBox(Закладки-Меню мини-контент)-->
+			<DIV id="rightBox">
+			<!--Мини Закладки-->
+				<div id="tabBox"><!--Контейнер для закладок (+comment bugFix для Opera - зазоры )--><!--
+					Tab 1
+					--><a href="#" title="Home" class="miniTabs" id="Tab1">
+						<div class="tabBg" id="tabBg1"></div><!--Контейнер под иконку закладки(т.к. используется спрайт)-->
+					</a><!--
+				 	Tab 2
+					--><a href="#" title="Hot News" class="miniTabs" id="Tab2">
+						<div class="tabBg" id="tabBg2"></div>
+					</a><!--
+				 Tab 3
+					--><a href="#" title="Corporation" class="miniTabs" id="Tab3">
+						<div class="tabBg" id="tabBg3"></div>
+					</a><!--
+				 Tab 4
+					--><a href="#" title="Service" class="miniTabs" id="Tab4">
+						<div class="tabBg" id="tabBg4"></div>
+					</a>
+				</div>
+
+			 <!--Box под контент вкладок-->
+				<div id="tabContent">
+				 <!--Реализация более строго позиционирования для шрифта Verdana (с PSD-макетом)-->
+					<div class="tab2Text1" id="tab2Text1Line1">Announcing Oracle</div>
+					<div class="tab2Text1" id="tab2Text1Line2">Cloud Application</div>
+					<div class="tab2Text1" id="tab2Text1Line3">Foundation</div>
+					<div id="tab2Text2Line1">•The Foundation</div>
+					<span id="tab2Text2Line2">for</span>
+					<span id="tab2Text2Line3">Innovation</span>
+					<a href="#" id="moreButt">more</a>
+					<span id="tab2Text2Line4">for Next-Generation</span>
+					<span id="tab2Text2Line5">Applications</span>
+				</div>
+			</DIV><!-- END OF: #rightBox-->
+
+			<!--3.3) Область под Контент 2 (Content Down Box)-->
+			<DIV id="downBox">
+
+				<div id="headEventsBlock"><!--BlockHideShadow-->
+					<div id="headEventsBox">Events</div><!--Box закладки блока Events-->
+				</div>
+
+			 <!--Box для контента-->
+				<DIV id="contentEventsBox">
+
+				 <!--Event1-->
+					<div id="Event1" class="Events">
+						<img src="IMG\Event1.jpg" class="eventImg" alt="Event Image" />
+						<span class="eventHead">Oracle Systems Strategy & Performance</span>
+						<span class="eventDate">24 July 2013</span>
+						<div class="divBreake"></div><!-- Отступ между контентом -->
+						<span class="eventContent">
+							Join Benoit Chaffanjon, Oracle Chief Architect for this exclusive roundtable dinner to network with your peers and hear from a leading industry thought leader on Oracle’s systems strategy and performance.<br>
+							&nbsp; &nbsp;Benoit Chaffanjon has worked in the field IT enterprise architecture and multi-layer solutions for over 18 years and spent his recent time around...
+						</span>
+						<a href="#" class="eventLearnMore">(Learn more)</a>
+					</div>
+					<div id="evSeparator"></div>
+
+				 <!--Event2-->
+					<div id="Event2" class="Events">
+						<img src="IMG\Event2.jpg" class="eventImg" alt="Event Image" />
+						<span class="eventHead">Oracle's Advanced LDom Discovery Day</span>
+						<span class="eventDate">24 July 2013</span>
+						<div class="divBreake"></div><!-- Отступ между контентом -->
+						<span class="eventContent">
+							Study the latest developments in SPARC server virtualisation using LDOMs v3.0 and how these can be used to design highly available, mission critical architectures for the new SPARC T4, T5.<br>
+							&nbsp; &nbsp;Attend the half day seminar and see Logical Domains Technology in Action. A useful follow-on to the recent “Solaris Technology Day” and SPARC...
+						</span>
+						<a href="#" class="eventLearnMore">(Learn more)</a>
+					</div>
+					<div id="evSeparator"></div>
+
+				 <!--Event3-->
+					<div id="Event3" class="Events">
+						<img src="IMG\Event3.jpg" class="eventImg" alt="Event Image" />
+						<span class="eventHead">Oracle Public Sector Exadata Workshop</span>
+						<span class="eventDate">25 July 2013</span>
+						<div class="divBreake"></div><!-- Отступ между контентом -->
+						<span class="eventContent">
+							The Oracle Database Machine delivers the first and only complete grid architecture for all data needs without losing any of the Oracle database features. Designed for database systems of any size, the Sun Oracle Database Machine is a complete package of soft&shy;ware, servers, and storage for data warehousing, transaction processing, and consoli&shy;dated mixed application workloads. Simple and fast...
+						</span>
+						<a href="#" class="eventLearnMore">(Learn more)</a>
+					</div>
+
+				</DIV><!-- END OF: #contentEventsBox-->
+
+			 <!--Блок листания Событий-->
+				<div id="navEventsBlock"><!--BlockHideShadow-->
+					<div id="navEventsBox"><!--Box для листания Событий-->					
+						<a href="#" id="navLeft"></a>
+						<a href="#" id="navRight"></a>
+					</div>
+				</div>
+
+			</DIV><!-- END OF: #downBox-->
+
+		</DIV><!-- END OF: #contentBox-->
+
+	 <!--4.) Footer Low-->
+		<div id="footerLow">
+			<div id="footerLowText">about</div>
+			<div id="footerLowLogo"></div>
+		</div>
+
+	 <!--5.) Footer-->	 
+		<div id="footer"><!--Контейнер для повторяющегося фона-->
+			<div id="footerBox"><!--Блок для внутреннего центрирования текста +сам будет центрирован-->
+				<p class="footerText one">Images and texts content taken from www.oracle.com</p>
+				<p class="footerText two">Not commerce site. July 2013</p>
+			</div>
+		</div>
+
+	</DIV><!-- END OF: #Box-->
+</BODY>
+</HTML>

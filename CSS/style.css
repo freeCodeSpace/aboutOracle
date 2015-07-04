@@ -1,0 +1,621 @@
+/* 														0) Style Reset & Boxing
+=================================================================== */
+HTML {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+
+BODY {line-height: 1;padding: 0;margin: 0;background-color: #d2e6f4;}
+
+#box {min-width: 800px;max-width: 100%;margin: auto;} 
+/*для более точно позиционирование текста, используется padding-top (вместо line-height=height) с учетом файла userScr.js*/
+
+/* 														1) Header Low
+=================================================================== */
+						/*Контейнер для повторяющегося фона на всю ширину*/
+#headerLow {
+	height: 50px;
+	background-color: #619bcd;
+}
+									/*Контейнер для центрирования контента*/
+	#headerLowBox {
+		width: 800px;
+		margin: auto;
+		overflow: hidden;
+	}
+							/*Начальный Текст*/
+		#hlText {
+			float: left;
+			font-family: Tahoma;
+			font-weight: normal;
+			font-size: 12px;
+			color: #cacaca;
+			margin-top: 14px;
+		}
+								/*Свойства box пользовательского входа*/
+		.UsEnter {
+			float: left;
+			width: 64px;
+			height: 22px;
+			background-color: #d2e6f4;
+			border-radius: 5px;
+			text-decoration: none;
+			font-family: Arial;
+			font-size: 13px;
+			padding-top: 7px;
+			text-align: center;
+			border: 1px solid white;
+			margin-top: 6px;
+			margin-left: 15px;
+			outline: none;
+		}
+										/* Внутренний Текст */
+		.UsEnter.SignIn { color: #e4620d;}
+		.UsEnter.Reg { color: #993333; margin-left: 14px;}
+
+		.UsEnter:hover {
+			background-color: #F4E9FF;
+		}
+						 /*Поле Поиска*/
+		#hInput {
+			height: 28px;
+			width: 208px;
+			float: right;
+			margin-top: 8px;
+			margin-right: 9px; 
+			background: url(../IMG/Icons.png) no-repeat; /*Использование спрайта*/
+			background-position: 0px 0px;
+			}
+						 			/*Текст поля Поиска*/
+			#hInSearch {
+				margin-top: 5px;
+				width: 160px;
+				margin-left: 11px;
+				background-color: transparent;
+				border: none;
+				font-family: Arial;
+				font-size: 13px;
+				color: #999999;
+				padding-left: 5px;
+			}
+
+			#hInSubmit {display: none;}
+/* 														2) Header Main
+=================================================================== */
+#header {
+	height: 198px;
+	border-top: 2px groove #ffffff;
+	border-bottom: 2px ridge #ffffff;
+	box-shadow: #fe0700 0px 0px 6px 5px;
+	position: relative;
+	background: url(../IMG/2_header.jpg) no-repeat;	
+	background-position: center;
+	background-color: #6d9dcd;
+}	
+	#headerBox {
+		margin: auto;
+		width: 800px;
+	}
+							 /*Текст перед Лого*/
+		#aboutText {
+		  position: relative;
+		  top: 91px;
+		  left: -108px;
+			overflow: hidden;
+			text-transform: uppercase;
+			letter-spacing: 8px;
+			color: #ffffff;
+			padding-top: 1px;
+			font-family: Arial;
+			font-size: 24px;
+			cursor: pointer;
+			text-decoration: none;
+		}
+							/*Блок-Область для ссылки на Главную (вместо карты изображения)*/
+		#clickBox {
+			display: inline-block;
+			position: relative;
+			width: 327px;
+			height: 50px;
+			top: 139px;
+			left: -248px;
+			cursor: pointer;
+			outline: none;
+				/*необязательные параметры:*/
+				opacity: 0;
+				border: none;
+				text-decoration: none;
+				background: transparent;
+		}
+
+/* 														3) Content Part I
+=================================================================== */
+						 /*Box центрирования контента*/
+#contentBox {
+	height: 764px;
+	width: 800px;
+	margin: auto;
+	margin-top: 33px;
+	background: #d2e6f4;
+		/*overflow: hidden; - не обязателен*/
+
+}
+/*Левый Контент - Блок Слайдов
+----------------------------------*/
+						/*3.1) leftBox(под панель и слайдер)*/
+	#leftBox {
+		height: 286px;
+		width: 370px;
+		padding-top: 20px; /*Под тень*/
+		margin-left: 15px;
+		overflow: hidden;
+		float: left;
+		position: relative; /*Для позиционирования стрелок*/
+			/*отступ для стыков блоков*/
+			padding-bottom: 5px;
+			padding-right: 5px;
+	}
+	/*Переключатель Слайдера*/
+								/*Левая стрелка*/
+		#prevSlide {
+			display: inline-block;
+			background: url(../IMG/Icons.png) no-repeat;
+			background-position: 0px -29px;
+			height: 35px;
+			width: 35px;
+			position: absolute;
+			top: 26px;
+			left: 30px;
+			text-decoration: none;
+			cursor: pointer;
+			outline: none;
+		}
+								 /*Текст к Изображению(также BoxPanel)*/
+		#slidePanel {
+			display: block;
+			padding-top: 12px;
+			height: 33px;
+			width: 338px;
+			margin-left: 15px;
+			background-color: #d2e6f4;
+			border-radius: 10px 10px 0px 0px;
+			border: 1px solid white;
+			border-bottom: none;
+			color: #647aa8;
+			text-align: center;
+			font-family: Calibri;
+			font-size: 22px;
+			font-weight: 400;
+			text-decoration: none;
+			box-shadow: #6d9dcd 0px 0px 10px 0px;
+			outline: none;
+		}
+								/*Правая стрелка*/
+		#nextSlide {
+			display: inline-block;
+			height: 35px;
+			width: 35px;
+			position: absolute;
+			top: 26px;
+			left: 305px;
+			background: url(../IMG/Icons.png) no-repeat;
+			background-position: -72px -29px;
+			text-decoration: none;
+			cursor: pointer;
+			outline: none;
+		}
+											/*Смена фона при наведении (левая стрелка)*/
+		#prevSlide:hover {
+			background: url(../IMG/Icons.png) no-repeat;
+			background-position: -36px -29px;
+		}
+											/*Смена фона при наведении (правая стрелка)*/
+		#nextSlide:hover {
+			background: url(../IMG/Icons.png) no-repeat;
+			background-position: -108px -29px;
+		}
+							/*Box под слайды*/
+		#jQslides {
+			height: 238px;
+			width: 368px;
+			border: 1px solid #999999;
+			background-image: url(../IMG/Slide1.jpg);
+			cursor: pointer;
+			overflow: hidden;
+		}
+			img { border: 0;}
+
+/*4)Правый Контент
+----------------------------------*/
+						/*3.2) rightBox(под закладки мини-контента)*/
+	#rightBox {
+		height: 306px;
+		width: 370px;
+		margin-left: 415px;
+		background: #d2e6f4;
+		padding-bottom: 5px;/*отступ для стыков блоков*/
+			/*overflow: hidden; - не обязателен*/
+	}
+						/*Контейнер для закладок*/
+		#tabBox {
+			background: #d2e6f4;
+			padding-top: 20px;
+			font-size: 0;/*#0 Убирание зазоров для прижатия внутренних блоков к низу контейнера*/
+			overflow: hidden;
+		}
+								/*Общие стили для мини-вкладок*/
+			.miniTabs {
+				display: inline-block;
+				height: 45px;
+				width: 63px;
+				margin-left: 4px;
+				background-color: #d2e6f4;
+				border-radius: 10px 10px 0px 0px;
+				box-shadow: #6d9dcd 0px 0px 5px 0px;
+				border: 1px solid white;
+				border-bottom: none;
+				cursor: pointer;
+				outline: none;
+			}
+								/*Общий стиль для Контейнеров под иконку закладки*/
+				.tabBg {
+					height: 35px;
+					width: 35px;
+					background: url(../IMG/Icons.png) no-repeat;					
+					background-color: #d2e6f4;
+					margin-top: 5px;
+					margin-left: 14px;/*либо задав margin: auto;*/
+				}
+			/*Отдельно для каждой закладки (фон и iconBox)*/
+						/*Tab1*/
+			#Tab1 {
+				margin-left: 52px;
+				margin-left: 49px;
+			}
+				#tabBg1 {
+					background-position: 0px -67px;
+				}
+				#tabBg1:hover {
+					background-position: -36px -67px;
+				}
+
+						/*Tab2 (она активна по умолчанию)*/
+			#Tab2 {
+				background-color: white;
+				border: 1px solid #d2e6f4;
+				border-bottom: none;
+				height: 43px;
+			}
+				#tabBg2 {
+					background-position: -144px -67px;
+					background-color: white;
+					margin-top: 4px;
+				}
+
+						/*Tab3*/
+				#tabBg3 {
+					background-position: -72px -67px;
+				}
+				#tabBg3:hover {
+					background-position: -108px -67px;
+				}
+
+						/*Tab4*/
+				#tabBg4 {
+					background-position: -179px -29px;
+				}
+				#tabBg4:hover {
+					background-position: -180px -67px;
+				}
+		/*Контент Вкладок*/
+								/*Box под контент вкладок*/
+		#tabContent {
+			height: 238px;
+			width: 368px;
+			border: 1px solid #999999;
+			background-image: url(../IMG/BgTabContent.jpg);
+			overflow: hidden;
+			font-family: Verdana;
+		}
+									/*Общие стили для Текста (Текст Уровень 1)*/
+			.tab2Text1 {
+				margin-left: 14px;
+				margin-top: 11px;
+				font-size: 20px;
+				font-weight: 100;
+				color: #18509d;
+				line-height: 22px;
+			}
+			#tab2Text1Line2 {	margin-top: 2px; }
+			#tab2Text1Line3 {	margin-top: 2px; }
+											/*Текст Уровень 2*/
+			#tab2Text2Line1 {
+				color: black;
+				font-size: 14px;
+				margin-left: 132px;
+				margin-top: 56px;
+			}
+			#tab2Text2Line2 {
+				line-height: 20px;
+				color: black;
+				font-size: 14px;
+				margin-left: 178px;
+			}
+			#tab2Text2Line3 {
+				color: #ff0000;
+				font-size: 14px;
+			}
+								/*Кнопка подробнее*/
+			#moreButt {
+				display: block;
+				height: 16px;
+				width: 46px;
+				padding-top: 1px;
+				text-align: center;
+				color: #18509d;
+				font-size: 12px;
+				border: 1px solid #828483;
+				border-radius: 5px;
+				box-shadow: #767676 2px 2px 4px -1px;
+				margin-left: 220px;
+				margin-top: 0px;
+				text-decoration: none;
+				outline: none;
+				background-color: white;				
+			}
+			#moreButt:hover {
+				background-color: #F4E9FF;
+			}
+											/*Текст Уровень 3*/
+			#tab2Text2Line4 {
+				line-height: 43px;
+				color: black;
+				font-size: 20px;
+				margin-left: 14px;
+			}
+			#tab2Text2Line5 {
+				color: #ff0000;
+				font-size: 20px;
+			}
+
+/* 														3) Content Part II
+=================================================================== */
+							/*3.3) Область под нижний блок контента*/
+	#downBox {
+		margin-top: 14px;
+		height: 335px;
+		background-color: #d2e6f4;
+	}
+											/*BlockHideShadow*/
+		#headEventsBlock {
+				height: 46px;
+					/*Для наложения тени*/
+					padding-top: 11px; /*под тень*/
+					overflow: hidden; /*Скроем тень*/					
+		}
+											/*Box закладки блока Events*/
+			#headEventsBox {
+				height: 34px;
+				padding-top: 11px;
+				width: 88px;
+				margin: auto;
+				background-color: #d2e6f4;
+				box-shadow: #6d9dcd 0px 0px 10px 0px;
+				border-radius: 10px 10px 0px 0px;
+				border: 1px solid white;
+				border-bottom: none;
+				text-align: center;
+				color: #fda56c;
+				font-size: 23px;
+				font-family: Calibri;
+				font-weight: 400;
+					/*Для наложения тени*/
+					position: relative;
+					z-index: 2;
+			}
+											/*Box для контента*/
+		#contentEventsBox {
+			height: 304px;
+			width: 780px;
+			padding: 9px;
+			border-radius: 10px;
+			border: 1px solid #d3d3d3;
+			background-color: #f4f4f4;
+			box-shadow: #6d9dcd 0px 0px 10px 0px;
+				/*Для наложения тени*/
+				position: relative;
+				z-index: 1;
+		}
+							/*Общие стили для блоков Событий*/
+			.Events {
+				height: 90px;
+				width: 770px;
+				background-color: #f4f4f4;
+				margin: 0px;
+				line-height: 12px;
+				overflow: hidden;
+			}
+							/*Блок для 1-го События*/
+			#Event1 {
+				height: 90px;
+				padding: 5px;
+			}
+									/*Общий класс для картинок (для всех событий)*/
+				.eventImg {
+					border: 1px solid #999999;
+					height: 88px;
+					width: 193px;
+					float: left;
+					margin-right: 10px;
+				}
+										/*Общий класс для Заголовков (для всех событий)*/
+				.eventHead {
+					line-height: 14px;
+					color: #18509d;
+					font-family: Verdana;
+					font-size: 18px;
+				}
+										/*Общий класс для Даты (для всех событий)*/
+				.eventDate {
+					color: #e4620d;
+					font-family: Verdana;
+					font-size: 14px;
+					margin-left: 10px;
+					float: right;
+					line-height: 16px;
+				}
+										/*Отступ между контентом*/
+				.divBreake {
+					height: 2px;
+				}
+										/*Общий класс для Контента (для всех событий)*/
+				.eventContent {
+					color: #4d4d4d;
+					font-family: Verdana;
+					font-size: 12px;
+					line-height: 15px;
+					font-weight: 100;
+				}
+										/*Общий класс для Подробнее (для всех событий)*/
+				.eventLearnMore {
+					color: #993333;
+					font-family: Verdana;
+					font-size: 12px;
+					margin-left: 3px;
+					text-decoration: none;
+				}
+
+							/*Блок для 2-го События*/
+			#Event2 {
+				height: 90px;
+				padding: 5px 5px 5px 5px;
+			}
+							/*Блок для 3-го События*/
+			#Event3 {
+				height: 95px;
+				padding: 5px 5px 0px 5px;
+			}
+									/*Разделитель*/
+		#evSeparator {
+			height: 2px;
+			background-image: url(../IMG/Separator.png);
+			background-repeat: repeat-x;
+		}
+												/*BlockHideShadow*/
+		#navEventsBlock {
+			height: 27px;
+				/*Для наложения тени*/
+				padding-bottom: 11px; /*под тень*/
+				overflow: hidden; /*Скроем тень*/
+		}
+										/*Box для листания Событий*/
+			#navEventsBox {
+				height: 55px;
+				width: 54px;
+				margin: auto;
+				background-color: #d2e6f4;
+					/*box-shadow: #1273cd 0px 0px 10px 0px; В-1*/
+				box-shadow: #6d9dcd 0px 0px 10px 0px;
+				border-radius: 50%;
+				border: 1px solid white;
+				text-align: center;
+				margin-top: -29px;
+				font-size: 0;
+					/*Для наложения тени*/
+					position: relative;
+					z-index: 2;
+			}
+									/*Box для левой стрелки*/
+				#navLeft {
+					margin-top: 31px;
+					margin-left: 8px;
+					float: left;
+					height:18px;
+					width: 16px;
+					background-image: url(../IMG/Icons.png);
+					background-position: -144px -29px;
+						overflow: hidden;/*На всякий случай*/
+				}
+				#navLeft:hover {
+					background-position: -162px -29px;
+				}
+									/*Box для правой стрелки*/
+				#navRight {
+					margin-top: 31px;
+					margin-right: 8px;
+					float: right;
+					height:18px;
+					width: 16px;
+					background-image: url(../IMG/Icons.png);
+					background-position: -144px -48px;
+						overflow: hidden;/*На всякий случай*/
+				}
+				#navRight:hover {
+					background-position: -162px -48px;
+				}
+/* 														4) Footer Low
+=================================================================== */
+#footerLow {
+	height: 50px;
+	background-color: #e20000;
+	position: relative;
+	border-top: 2px groove #ffffff;
+	border-bottom: 2px ridge #ffffff;
+	box-shadow: #fe0700 0px 0px 6px 5px;
+}
+									/*Текст about*/
+	#footerLowText {
+		width: 88px;
+		margin: auto;
+		text-transform: uppercase;
+		color: #ffffff;
+		padding-top: 3px;
+		font-family: Arial;
+		font-size: 12px;
+		letter-spacing: 12px;
+		font-weight: 100;
+	}
+									/*Картинка SmallLogo*/
+	#footerLowLogo {
+		height: 30px;
+		width: 245px;
+		margin: auto;
+		background-image: url(../IMG/Icons.png);
+		background-position: 0px -103px;
+		background-repeat: no-repeat;
+
+	}
+/* 														5) Footer
+=================================================================== */
+				/*Контейнер для повторяющегося фона*/
+#footer {
+	height: 60px;
+	background-image: url(../IMG/FooterBgRep.jpg);
+	background-repeat: repeat-x;
+	background-color: white;
+}
+							/*Блок для внутреннего центрирования текста +сам будет центрирован*/
+	#footerBox {
+		height: 50px;
+		width: 343px;
+		margin: auto;
+		text-align: center;
+		font-size: 0px;
+	}
+							 /*Общий стиль для текста*/
+	.footerText {
+		display: inline-block;
+		font-family: Verdana;
+		font-size: 12px;
+		font-weight: normal;
+		color: #993333;
+		white-space: nowrap;
+	}
+										 /*Смещения для абзацев (индивидуально)*/
+		.footerText.one {
+			margin: 0px;
+			margin-top: 19px;
+		}
+		.footerText.two {
+			margin: 0;
+			font-size: 12px;
+			margin-top: 4px;
+			text-indent: 34px;
+		}

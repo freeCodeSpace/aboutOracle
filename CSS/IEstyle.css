@@ -1,0 +1,15 @@
+/*(PIE.htc - не подошел)*/
+
+	/*Решение для нескольких теней*/	
+#header, #footerLow {				
+	filter: progid:DXImageTransform.Microsoft.shadow(direction=180, color=#fe0700, strength=7),
+					progid:DXImageTransform.Microsoft.shadow(direction=0, color=#fe0700, strength=7)
+	;/*скорее лучше использ. повторяющийся фон, вместо тени*/
+}
+
+/*Высота контейнеров*/
+#headerLow {
+	height: 41px;
+}
+
+/* . . . */
