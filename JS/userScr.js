@@ -27,7 +27,7 @@ $(document).ready(function() {
 });
 
 	//Ф-ия смены надписи:
-function changeTitle() {	
+function changeTitle() {
 	var SlideName = $(this).find('img').attr('alt');//Имя текущей Картинки
 	var SlideHref = $(this).attr('href');//Содержимое атрибута ссылки (текущей Картинки)
 	$('#slidePanel').text(SlideName).attr('href', SlideHref);//Замена текста и атрибута ссылки (на текущие данные)
